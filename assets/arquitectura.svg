@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+  <g stroke="#444" stroke-width="1.4" fill="none" marker-end="url(#a)">
+    <path d="M140 70 H188"/>
+    <path d="M370 70 H418"/>
+    <path d="M600 70 H688"/>
+    <path d="M510 100 V145 H290 V188"/>
+    <path d="M510 100 V188"/>
+    <path d="M510 145 H730 V188"/>
+    <path d="M290 260 V328"/>
+    <path d="M700 260 V295 H640 V328"/>
+    <path d="M760 260 V295 H815 V328"/>
+  </g>
+  <text x="644" y="62" font-size="11" fill="#666" text-anchor="middle">tablas, gráficos</text>
+  <text x="644" y="90" font-size="11" fill="#666" text-anchor="middle">y respuestas</text>
+  <g stroke-width="1.4">
+    <rect x="20" y="40" width="120" height="60" rx="6" fill="#eef2f8" stroke="#2b4c7e"/>
+    <rect x="190" y="40" width="180" height="60" rx="6" fill="#eef2f8" stroke="#2b4c7e"/>
+    <rect x="420" y="40" width="180" height="60" rx="6" fill="#dce6f3" stroke="#2b4c7e"/>
+    <rect x="690" y="40" width="180" height="60" rx="6" fill="#dce6f3" stroke="#2b4c7e"/>
+    <rect x="200" y="190" width="180" height="70" rx="6" fill="#fdf1dc" stroke="#b07a1a"/>
+    <rect x="420" y="190" width="180" height="70" rx="6" fill="#eef2f8" stroke="#2b4c7e"/>
+    <rect x="640" y="190" width="180" height="70" rx="6" fill="#e6f2e8" stroke="#2f7a3d"/>
+    <rect x="200" y="330" width="180" height="80" rx="6" fill="#fdf1dc" stroke="#b07a1a"/>
+    <rect x="560" y="330" width="160" height="70" rx="6" fill="#e6f2e8" stroke="#2f7a3d"/>
+    <rect x="740" y="330" width="150" height="70" rx="6" fill="#f3e8f3" stroke="#7a2f73"/>
+  </g>
+  <g fill="#111" text-anchor="middle">
+    <text x="80" y="67">data/</text><text x="80" y="85" font-size="12">CSV y esquema</text>
+    <text x="280" y="67">data_loader.py</text><text x="280" y="85" font-size="12">carga y validación</text>
+    <text x="510" y="67" font-weight="bold">SurveyFacade</text><text x="510" y="85" font-size="12">facade.py · Facade</text>
+    <text x="780" y="67" font-weight="bold">app.py</text><text x="780" y="85" font-size="12">interfaz Streamlit</text>
+    <text x="290" y="218" font-weight="bold">AnalysisFactory</text><text x="290" y="236" font-size="12">eda.py · Factory</text>
+    <text x="510" y="218">visualizations.py</text><text x="510" y="236" font-size="12">build_chart · Plotly</text>
+    <text x="730" y="218" font-weight="bold">LocalDataAgent</text><text x="730" y="236" font-size="12">agent.py · enruta, interpreta,</text><text x="730" y="251" font-size="12">verifica y corrige</text>
+    <text x="290" y="358" font-weight="bold">AnalysisStrategy</text><text x="290" y="376" font-size="12">eda.py · Strategy</text><text x="290" y="393" font-size="11">Distribution · Comparison</text><text x="290" y="406" font-size="11">Association · Cohort</text>
+    <text x="640" y="358" font-weight="bold">tools.py</text><text x="640" y="376" font-size="12">6 herramientas</text><text x="640" y="391" font-size="12">autorizadas</text>
+    <text x="815" y="358" font-weight="bold">OllamaClient</text><text x="815" y="376" font-size="12">llm_client.py</text><text x="815" y="391" font-size="12">llama3.2:3b local</text>
+  </g>
+  <rect x="20" y="440" width="860" height="62" rx="6" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="36" y="465" font-size="12" fill="#222"><tspan font-weight="bold">Funcional:</tspan> pipe (reduce), partial, map, filter, lambda, funciones puras y despacho por diccionario de funciones.</text>
+  <text x="36" y="488" font-size="12" fill="#222"><tspan font-weight="bold">Imperativo:</tspan> bucles y validaciones explícitas. <tspan font-weight="bold">POO:</tspan> clases abstractas, herencia, polimorfismo y dataclasses.</text>
+</svg>

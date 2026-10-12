@@ -1,0 +1,22 @@
+# Entorno y cachés
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+
+# Configuración local
+.streamlit/secrets.toml
+.claude/
+
+# Dataset grande (134 MB): ver README para obtenerlo
+data/data.csv
+
+# Código de demostración entregado en clase
+demo/
+
+# Material del curso (no forma parte del código fuente)
+Guia_Proyecto_Final_Integrador_Streamlit_Ollama_Actualizada.pdf
+Formato_Proyecto_Final_Integrador_Ejemplo_Actualizado.docx
