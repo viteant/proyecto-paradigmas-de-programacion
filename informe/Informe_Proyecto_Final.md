@@ -1,60 +1,6 @@
-<!--
-Borrador en Markdown del informe final. Para entregar:
-1. Copiar el contenido al formato institucional (DOCX) y exportar a PDF.
-2. Completar los campos entre corchetes: nombre, fecha, enlaces y capturas.
-3. Actualizar los números de página de los índices.
-4. Comprobar que el PDF no supere las 15 páginas, incluidos los anexos.
--->
+# Uso, actitud y confianza hacia la inteligencia artificial en la comunidad de desarrollo
 
-# UNIVERSIDAD CASA GRANDE
-
-**MAESTRÍA EN INTELIGENCIA ARTIFICIAL Y CIENCIA DE DATOS**
-
-Paradigmas de Programación para Inteligencia Artificial y Análisis de Datos C2026 P1
-
-**TEMA:** Proyecto Final Integrador — Aplicación modular en Streamlit con agente de IA local y análisis de datos
-
-**Título del proyecto:** Uso, actitud y confianza hacia la inteligencia artificial en la comunidad de desarrollo
-
-**Nombre:** [Nombre y apellido]
-
-**Fecha de entrega:** [dd/mm/aaaa]
-
----
-
-## Índice de contenido
-
-1. Resumen
-2. Introducción
-3. Objetivos
-4. Marco teórico
-5. Dataset y problema identificado
-6. Metodología y arquitectura
-7. Desarrollo de la aplicación
-8. Integración del agente de IA
-9. Resultados
-10. Reproducibilidad y despliegue
-11. Conclusiones
-12. Referencias
-13. Anexos (A. Capturas de funcionamiento · B. Repositorio de GitHub · C. Video demostrativo)
-
-## Índice de figuras
-
-- Figura 1. Arquitectura general de la aplicación
-- Figura 2. Interfaz principal de la aplicación
-- Figura A1 a A6. Capturas de funcionamiento (Anexo A)
-
-## Índice de tablas
-
-- Tabla 1. Resumen de calidad del dataset
-- Tabla 2. Aplicación de paradigmas y patrones de diseño
-- Tabla 3. Herramientas autorizadas del agente
-- Tabla 4. Indicadores generales de IA
-- Tabla 5. Contraste entre uso diario y no uso de IA
-- Tabla 6. Uso diario de IA por experiencia profesional y por edad
-- Tabla 7. Resultados principales del análisis
-
----
+Proyecto final integrador: aplicación modular en Streamlit con agente de IA local y análisis de datos.
 
 ## Resumen
 
@@ -114,8 +60,7 @@ La copia local contiene 49 123 respuestas y 170 columnas en `data.csv`, junto co
 
 **Justificación técnica:** las variables son mayoritariamente categóricas y ordinales, lo que permite practicar distribuciones, tablas cruzadas y comparaciones entre cohortes. `WorkExp` es numérica y admite histogramas, diagramas de caja y discretización. Las preguntas de IA tienen alrededor de un tercio de respuestas faltantes, de modo que cada cálculo debe declarar su base.
 
-**Tabla 1**
-*Resumen de calidad del dataset (variables analizadas)*
+**Tabla 1.** Resumen de calidad del dataset (variables analizadas)
 
 | Variable | Tipo | Nulos | % nulos |
 |---|---|---:|---:|
@@ -135,8 +80,7 @@ La copia local contiene 49 123 respuestas y 170 columnas en `data.csv`, junto co
 
 La aplicación se organiza en capas que separan la interfaz, los datos, el análisis, la visualización y la integración con el modelo local (Figura 1). La interfaz `app.py` solo se comunica con la fachada `SurveyFacade`. La fachada coordina la carga, crea las estrategias de análisis mediante la fábrica, obtiene el gráfico pertinente y construye el agente con sus herramientas.
 
-**Figura 1**
-*Arquitectura general de la aplicación*
+**Figura 1.** Arquitectura general de la aplicación
 
 ![Arquitectura general de la aplicación](../assets/arquitectura.svg)
 
@@ -165,8 +109,7 @@ proyecto_final/
 
 `data_loader.py` valida que existan las columnas necesarias antes de leer el CSV. `eda.py` contiene todo el cálculo y no depende de Streamlit. `visualizations.py` solo transforma tablas en figuras. `tools.py` expone los cálculos al agente con argumentos restringidos. `llm_client.py` encapsula el HTTP con Ollama y traduce sus errores a una excepción propia, `OllamaError`. Las tablas de la interfaz, los gráficos y el contexto del agente salen de la misma llamada a la fachada, lo que evita duplicar la lógica de cálculo.
 
-**Tabla 2**
-*Aplicación de paradigmas y patrones de diseño*
+**Tabla 2.** Aplicación de paradigmas y patrones de diseño
 
 | Elemento | Implementación | Ubicación |
 |---|---|---|
@@ -228,8 +171,7 @@ La interfaz sigue la estructura del demo de clase. La barra lateral permite conf
 
 Cada tabla muestra el numerador y la base de sus porcentajes.
 
-**Figura 2**
-*Interfaz principal de la aplicación*
+**Figura 2.** Interfaz principal de la aplicación
 
 [Insertar captura de la pantalla principal con las métricas y la pestaña Exploración.]
 
@@ -239,8 +181,7 @@ Cada tabla muestra el numerador y la base de sus porcentajes.
 
 La clase `LocalDataAgent` recibe un cliente de Ollama y un registro de herramientas autorizadas. Cada herramienta (`Tool`) envuelve un cálculo de la fachada y declara los valores permitidos de sus argumentos (Tabla 3).
 
-**Tabla 3**
-*Herramientas autorizadas del agente*
+**Tabla 3.** Herramientas autorizadas del agente
 
 | Herramienta | Argumentos permitidos | Cálculo que ejecuta |
 |---|---|---|
@@ -268,8 +209,7 @@ Se utilizó `llama3.2:3b` (Ollama 0.21.1), descargado con `ollama pull llama3.2:
 
 ## Resultados
 
-**Tabla 4**
-*Indicadores generales de IA*
+**Tabla 4.** Indicadores generales de IA
 
 | Indicador | Casos | Base | % |
 |---|---:|---:|---:|
@@ -281,8 +221,7 @@ Se utilizó `llama3.2:3b` (Ollama 0.21.1), descargado con `ollama pull llama3.2:
 
 Casi la mitad de quienes respondieron usa IA a diario, pero una proporción similar desconfía de la precisión de sus respuestas. Uso y confianza no van necesariamente juntos. En cuanto a la actitud, el 59,7 % es favorable o muy favorable (36,78 % y 22,93 %) y el 20,4 % es desfavorable o muy desfavorable.
 
-**Tabla 5**
-*Contraste entre uso diario y no uso de IA*
+**Tabla 5.** Contraste entre uso diario y no uso de IA
 
 | Resultado | Uso diario | No usa ni planea usar | Diferencia (p. p.) |
 |---|---:|---:|---:|
@@ -294,8 +233,7 @@ Casi la mitad de quienes respondieron usa IA a diario, pero una proporción simi
 
 La asociación es marcada: quienes usan IA a diario tienen una actitud mucho más favorable y desconfían menos. Aun así, una de cada cuatro personas que la usa a diario desconfía de su precisión, lo que sugiere un uso con supervisión crítica.
 
-**Tabla 6**
-*Uso diario de IA por experiencia profesional y por edad*
+**Tabla 6.** Uso diario de IA por experiencia profesional y por edad
 
 | Experiencia | % (casos/base) | Edad | % (casos/base) |
 |---|---:|---|---:|
@@ -310,8 +248,7 @@ La asociación es marcada: quienes usan IA a diario tienen una actitud mucho má
 
 El uso diario disminuye con la experiencia y con la edad, con una caída más pronunciada a partir de los 55 años y de los 20 años de experiencia. Por rol, las tasas más altas aparecen en desarrollo front-end (59,45 %), móvil (56,09 %) y full-stack (52,95 %). Las más bajas corresponden a sistemas embebidos (29,06 %) y aplicaciones de escritorio o empresariales (32,26 %). Entre quienes se dedican profesionalmente al desarrollo, la tasa es del 50,63 %, frente al 26,19 % de quienes programan como pasatiempo.
 
-**Tabla 7**
-*Resultados principales del análisis*
+**Tabla 7.** Resultados principales del análisis
 
 | Indicador | Resultado | Interpretación |
 |---|---|---|
