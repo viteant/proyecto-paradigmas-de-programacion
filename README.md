@@ -12,7 +12,7 @@ modelo local de Ollama.
 
 | Elemento | Detalle |
 |---|---|
-| Fuente | [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/2025/) (datos públicos, licencia ODbL) |
+| Fuente | [Stack Overflow Developer Survey 2025 en Kaggle](https://www.kaggle.com/datasets/aliaslam25/stack-overflow-developer-survey-2025) (Ali Aslam), copia de la [encuesta oficial](https://survey.stackoverflow.co/2025/) publicada bajo licencia ODbL 1.0 |
 | Archivos | `data/data.csv` (respuestas, 49 123 filas × 170 columnas, 134 MB) y `data/schema.csv` (diccionario de preguntas) |
 | Variables usadas | `ResponseId`, `MainBranch`, `Age`, `WorkExp`, `DevType`, `AISelect`, `AIAgents`, `AISent`, `AIAcc` |
 
@@ -45,10 +45,12 @@ Requiere Python 3.10 o superior (probado con Python 3.13 y Ollama 0.21).
 
 2. Obtener el dataset. `data/data.csv` no se versiona porque supera el límite
    de 100 MB de GitHub:
-   - Descargar el ZIP de 2025 desde <https://survey.stackoverflow.co/>.
+   - Descargar el dataset desde Kaggle:
+     <https://www.kaggle.com/datasets/aliaslam25/stack-overflow-developer-survey-2025>
+     (requiere una cuenta gratuita).
    - Copiar `survey_results_public.csv` como `data/data.csv`.
    - `data/schema.csv` ya está en el repositorio; corresponde a
-     `survey_results_schema.csv` del mismo ZIP.
+     `survey_results_schema.csv` de la misma descarga.
 
 3. Instalar [Ollama](https://ollama.com/download), iniciar el servicio y
    descargar el modelo:

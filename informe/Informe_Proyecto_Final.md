@@ -47,9 +47,9 @@ Strategy define una familia de algoritmos intercambiables bajo un contrato comú
 
 ## Dataset y problema identificado
 
-**Dataset seleccionado:** Stack Overflow Developer Survey 2025. Fuente: https://survey.stackoverflow.co/2025/ (Stack Overflow, 2025a).
+**Dataset seleccionado:** Stack Overflow Developer Survey 2025. Fuente: https://www.kaggle.com/datasets/aliaslam25/stack-overflow-developer-survey-2025 (Aslam, 2026). Es una copia en Kaggle de la encuesta oficial de Stack Overflow (2025a), publicada bajo la licencia Open Database License (ODbL 1.0).
 
-La copia local contiene 49 123 respuestas y 170 columnas en `data.csv`, junto con el diccionario de preguntas en `schema.csv`. La metodología oficial informa 49 009 respuestas en los resultados publicados (Stack Overflow, 2025b), por lo que los porcentajes de este análisis no deben compararse cifra por cifra con el informe oficial. La aplicación carga solo nueve columnas para reducir memoria: el identificador, cuatro variables de segmentación (`MainBranch`, `Age`, `WorkExp`, `DevType`) y cuatro preguntas de IA:
+La descarga contiene 49 123 respuestas y 170 columnas en `survey_results_public.csv` (guardado como `data.csv`), junto con el diccionario de preguntas `survey_results_schema.csv` (guardado como `schema.csv`). La metodología oficial informa 49 009 respuestas en los resultados publicados (Stack Overflow, 2025b), por lo que los porcentajes de este análisis no deben compararse cifra por cifra con el informe oficial. La aplicación carga solo nueve columnas para reducir memoria: el identificador, cuatro variables de segmentación (`MainBranch`, `Age`, `WorkExp`, `DevType`) y cuatro preguntas de IA:
 
 - `AISelect`: frecuencia de uso de herramientas de IA.
 - `AIAgents`: uso de agentes de IA en el trabajo.
@@ -74,7 +74,7 @@ La copia local contiene 49 123 respuestas y 170 columnas en `data.csv`, junto co
 | MainBranch | Categórica | 0 | 0,00 |
 | ResponseId | Identificador | 0 | 0,00 |
 
-*Nota.* 49 123 filas, sin identificadores duplicados. Un valor faltante puede reflejar una pregunta omitida o no mostrada. Elaboración propia a partir de Stack Overflow (2025a).
+*Nota.* 49 123 filas, sin identificadores duplicados. Un valor faltante puede reflejar una pregunta omitida o no mostrada. Elaboración propia a partir de Aslam (2026).
 
 ## Metodología y arquitectura
 
@@ -282,6 +282,8 @@ El archivo `data.csv` (134 MB) no se versiona porque supera el límite de GitHub
 - Como trabajo futuro se propone ponderar las respuestas, aplicar pruebas de independencia (chi cuadrado) a los cruces y evaluar modelos locales de mayor tamaño para el enrutamiento.
 
 ## Referencias
+
+Aslam, A. (2026). *Stack Overflow Developer Survey 2025* [Conjunto de datos]. Kaggle. https://www.kaggle.com/datasets/aliaslam25/stack-overflow-developer-survey-2025
 
 Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design patterns: Elements of reusable object-oriented software*. Addison-Wesley.
 
