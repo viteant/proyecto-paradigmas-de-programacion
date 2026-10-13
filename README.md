@@ -136,10 +136,3 @@ resultado. El flujo es:
 La verificación confirma que cada cifra exista en el cálculo, pero no que esté
 bien asociada a su grupo. Por eso la interfaz muestra siempre la tabla
 calculada junto a la respuesta.
-
-## Entrega académica
-
-- Borrador del informe: [informe/Informe_Proyecto_Final.md](informe/Informe_Proyecto_Final.md).
-- El informe final se entrega en PDF (máximo 15 páginas, APA 7.ª edición) e
-  incluye las capturas (Anexo A), el enlace a este repositorio (Anexo B) y el
-  enlace al video de YouTube de máximo cinco minutos (Anexo C).
